@@ -12,10 +12,8 @@ data = []
 with open(csv_file, 'r') as file:
         i=0
         for line in file :
-
-
             dic={}
-            ##print(line)
+
             if i==0:
                 caso1 = re.search(r'(\w+),(\w+),(\w+)',line)
                 caso2 = re.search(r'(\w+){((\d+)|(\d+,\d+))}(::(\w+))?,,,,,',line)
@@ -49,5 +47,3 @@ with open(json_file, 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
 
 
-
-##(\w+),(\w+ ?\w+),(\w+ ?\w+),
